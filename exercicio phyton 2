@@ -1,0 +1,866 @@
+{
+  "metadata": {
+    "kernelspec": {
+      "name": "python",
+      "display_name": "Python (Pyodide)",
+      "language": "python"
+    },
+    "language_info": {
+      "codemirror_mode": {
+        "name": "python",
+        "version": 3
+      },
+      "file_extension": ".py",
+      "mimetype": "text/x-python",
+      "name": "python",
+      "nbconvert_exporter": "python",
+      "pygments_lexer": "ipython3",
+      "version": "3.8"
+    },
+    "colab": {
+      "provenance": [],
+      "include_colab_link": true
+    }
+  },
+  "nbformat_minor": 5,
+  "nbformat": 4,
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/amandavalenca-creator/exercicio_phyton2/blob/main/exercicio%20phyton%202\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 1- Elabore um código que peça o nome completo do usuário e imprima-o duas vezes: a primeira com todas as letras em maiúsculo (usando upper()) e a segunda com todas as letras em minúsculo (usando lower()).\n"
+      ],
+      "metadata": {
+        "id": "ATNazCS8PvXk"
+      },
+      "id": "ATNazCS8PvXk"
+    },
+    {
+      "id": "e887e041-e570-4338-8d72-db062afd8153",
+      "cell_type": "code",
+      "source": [
+        "nome= input(\"insira o nome completo\")\n",
+        "print(\"o nome completo é:\", nome.upper())\n",
+        "print(\"o nome completo é\", nome.lower())"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "e887e041-e570-4338-8d72-db062afd8153",
+        "outputId": "b6ed6873-a29d-4f66-98e8-53eb9615cb4e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "insira o nome completo amanda valença araujo\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "o nome completo é: AMANDA VALENÇA ARAUJO\no nome completo é amanda valença araujo\n"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 2- Elabore um código que receba uma frase digitada pelo usuário com espaços sobrando no início e no fim (ex: \" Aprendendo Python \"). Remova esses espaços em branco utilizando o método adequado e imprima a frase corrigida."
+      ],
+      "metadata": {
+        "id": "AH1423znP31T"
+      },
+      "id": "AH1423znP31T"
+    },
+    {
+      "id": "19563f67-2103-4196-8933-a42fd8899c92",
+      "cell_type": "code",
+      "source": [
+        "nome = input(\"insira uma frase com espaços sobrando\")\n",
+        "print(nome.strip())"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "19563f67-2103-4196-8933-a42fd8899c92",
+        "outputId": "800e3388-6a32-45cc-b543-68e1fc26d400"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "insira uma frase com espaços sobrando      hello world           \n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "hello world\n"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 3- Elabore um código que receba o nome de um aluno e a sua linguagem de programação favorita. Utilize o método .format() ou as f-strings para exibir a mensagem: \"O aluno [nome] tem como linguagem favorita o [linguagem].\".\n"
+      ],
+      "metadata": {
+        "id": "i7UbWXyFP9IT"
+      },
+      "id": "i7UbWXyFP9IT"
+    },
+    {
+      "id": "01c8a96c-4d64-48a8-a8b2-3c0f4f708491",
+      "cell_type": "code",
+      "source": [
+        "nome = input(\"informe o nome do aluno\")\n",
+        "linguagem = input(\"informe a sua linguagem de programação favorita\")\n",
+        "print(f\"O(a) aluno(a) {nome} tem como linguagem favorita {linguagem}\")"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "01c8a96c-4d64-48a8-a8b2-3c0f4f708491",
+        "outputId": "dba4719e-829c-483e-9473-7e138778d798"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdin",
+          "text": "informe o nome do aluno Amanda\ninforme a sua linguagem de programação favorita phyton\n"
+        },
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "O(a) aluno(a) Amanda tem como linguagem favorita phyton\n"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 4- Elabore um código que crie uma lista contendo 5 nomes de bairros ou cidades. Em seguida, acesse e imprima apenas o terceiro item desta lista.\n"
+      ],
+      "metadata": {
+        "id": "gegRRKSiQC8y"
+      },
+      "id": "gegRRKSiQC8y"
+    },
+    {
+      "id": "c9eeefd7-5fcc-419e-b6a0-b46f66458a35",
+      "cell_type": "code",
+      "source": [
+        "cidades = [\"Goiânia\",\"São Paulo\",\"Rio de Janeiro\",\"Uberaba\",\"Unaí\"]\n",
+        "cidades[2]\n"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "c9eeefd7-5fcc-419e-b6a0-b46f66458a35",
+        "outputId": "987e4c92-c954-4c94-a8cd-3eb8b9e2d49a"
+      },
+      "outputs": [
+        {
+          "execution_count": 5,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "'Rio de Janeiro'"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 5- Utilizando a lista criada no exercício anterior, elabore um código que adicione um novo local ao final da lista e, logo em seguida, remova o primeiro item da lista. Imprima a lista final.\n"
+      ],
+      "metadata": {
+        "id": "PE1-v3M8QQlz"
+      },
+      "id": "PE1-v3M8QQlz"
+    },
+    {
+      "id": "d19d0179-332e-4662-87fc-037332303fac",
+      "cell_type": "code",
+      "source": [
+        "cidades.append(\"Luziânia\")\n",
+        "cidades.pop(0)\n",
+        "cidades"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "d19d0179-332e-4662-87fc-037332303fac",
+        "outputId": "2ef808e2-1251-4298-e54c-813e853545a4"
+      },
+      "outputs": [
+        {
+          "execution_count": 6,
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": "['São Paulo', 'Rio de Janeiro', 'Uberaba', 'Unaí', 'Luziânia']"
+          },
+          "metadata": {}
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 6- Elabore um código que crie uma lista com os números de 1 a 10. Utilizando a técnica de fatiamento (slicing), imprima uma sublista contendo apenas os elementos do 3º ao 7º índice.\n"
+      ],
+      "metadata": {
+        "id": "O0KK0RUNQZVb"
+      },
+      "id": "O0KK0RUNQZVb"
+    },
+    {
+      "id": "0599f46e-4c8e-4ef8-b16e-e8c8f67963c3",
+      "cell_type": "code",
+      "source": [
+        "números = [1,2,3,4,5,6,7,8,9,10,11]\n",
+        "print(f\"lista completa: {números}\")\n",
+        "sublista = números[3:8]\n",
+        "print(f\"sublista indices de 3 ao 7): {sublista}\")"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "0599f46e-4c8e-4ef8-b16e-e8c8f67963c3",
+        "outputId": "bdbfed31-b957-4fd1-a501-bc8c3dae00b3"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": "lista completa: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]\nsublista indices de 3 ao 7): [4, 5, 6, 7, 8]\n"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 7- Elabore um código que declare uma tupla contendo 4 marcas de carros. Tente alterar o valor do segundo elemento da tupla para uma nova marca. No próprio código, adicione um comentário explicando o motivo do erro que o Python vai gerar.\n"
+      ],
+      "metadata": {
+        "id": "wNDqeFsBQfzr"
+      },
+      "id": "wNDqeFsBQfzr"
+    },
+    {
+      "id": "454e7ecc-db2b-42cb-a635-cd0c4c0ded8d",
+      "cell_type": "code",
+      "source": [
+        "marcas = (\"ford\", \"audi\", \"wolksvagem\", \"bmw\")\n",
+        "marcas[1] = \"porche\"\n",
+        "marcas.pop(1)\n",
+        "#uma tupla é imutável"
+      ],
+      "metadata": {
+        "trusted": true,
+        "id": "454e7ecc-db2b-42cb-a635-cd0c4c0ded8d",
+        "outputId": "85562b3c-9510-4500-9334-103b85a91155"
+      },
+      "outputs": [
+        {
+          "ename": "<class 'TypeError'>",
+          "evalue": "'tuple' object does not support item assignment",
+          "traceback": [
+            "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+            "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+            "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[12]\u001b[39m\u001b[32m, line 2\u001b[39m\n\u001b[32m      1\u001b[39m marcas = (\u001b[33m\"\u001b[39m\u001b[33mford\u001b[39m\u001b[33m\"\u001b[39m, \u001b[33m\"\u001b[39m\u001b[33maudi\u001b[39m\u001b[33m\"\u001b[39m, \u001b[33m\"\u001b[39m\u001b[33mwolksvagem\u001b[39m\u001b[33m\"\u001b[39m, \u001b[33m\"\u001b[39m\u001b[33mbmw\u001b[39m\u001b[33m\"\u001b[39m)\n\u001b[32m----> \u001b[39m\u001b[32m2\u001b[39m \u001b[43mmarcas\u001b[49m\u001b[43m[\u001b[49m\u001b[32;43m1\u001b[39;49m\u001b[43m]\u001b[49m = \u001b[33m\"\u001b[39m\u001b[33mporche\u001b[39m\u001b[33m\"\u001b[39m\n\u001b[32m      3\u001b[39m marcas.pop(\u001b[32m1\u001b[39m)\n",
+            "\u001b[31mTypeError\u001b[39m: 'tuple' object does not support item assignment"
+          ],
+          "output_type": "error"
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 8- Elabore um código que crie um dicionário para representar um produto de supermercado, contendo as chaves 'nome', 'categoria' e 'preco'. Imprima apenas o valor correspondente ao 'preco'.\n"
+      ],
+      "metadata": {
+        "id": "G8eFXtiOPsYs"
+      },
+      "id": "G8eFXtiOPsYs"
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "HWL0S-F0Pm7m"
+      },
+      "id": "HWL0S-F0Pm7m"
+    },
+    {
+      "id": "6cb5e847-1fc1-4264-aa84-d99d5a623e01",
+      "cell_type": "code",
+      "source": [
+        "dicionario = {\"nome\": \"Arroz\", \"categoria\": \"Comida\", \"preço\": 5.00}\n",
+        "print(dicionario[\"preço\"])\n",
+        "\n"
+      ],
+      "metadata": {
+        "trusted": true,
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6cb5e847-1fc1-4264-aa84-d99d5a623e01",
+        "outputId": "53a91492-37bd-4b59-d6e8-077242947815"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5.0\n"
+          ]
+        }
+      ],
+      "execution_count": null
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        " Questao 9 - A partir do dicionário do exercício anterior, elabore um código que atualize o 'preco' do produto para um novo valor e adicione uma nova chave chamada 'em_estoque' com o valor booleano True. Imprima o dicionário atualizado.\n"
+      ],
+      "metadata": {
+        "id": "ElP98QPMP4cs"
+      },
+      "id": "ElP98QPMP4cs"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dicionario = {\"nome\": \"Arroz\", \"categoria\": \"Comida\", \"preço\": 5.00}\n",
+        "print(dicionario[\"preço\"])\n",
+        "print(\"o preço do dicionario atualizado é:\")\n",
+        "dicionario['preço'] = 10\n",
+        "print(dicionario)\n",
+        "dicionario['em_estoque'] = True\n",
+        "print(dicionario)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1JzPC0CAQBli",
+        "outputId": "0deef27f-6c0e-4cc0-ddbe-4bb9e1b77733"
+      },
+      "id": "1JzPC0CAQBli",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5.0\n",
+            "o preço do dicionario atualizado é:\n",
+            "{'nome': 'Arroz', 'categoria': 'Comida', 'preço': 10}\n",
+            "{'nome': 'Arroz', 'categoria': 'Comida', 'preço': 10, 'em_estoque': True}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 10- Elabore um código que peça um número inteiro ao usuário e, usando a operação de resto da divisão (%), informe se o número digitado é PAR ou ÍMPAR."
+      ],
+      "metadata": {
+        "id": "1rxRBwLsZmtA"
+      },
+      "id": "1rxRBwLsZmtA"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"informe um número: \"))\n",
+        "if x % 2 == 0:\n",
+        "  print(\"o número é par\")\n",
+        "else:\n",
+        "  print(\"o número é ímpar\")\n"
+      ],
+      "metadata": {
+        "id": "LM3hxOgmZs6_",
+        "outputId": "641c724c-6e0f-4bd9-8fbd-9ced0c1d6de6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "LM3hxOgmZs6_",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "informe um número: 6\n",
+            "o número é par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 11- Elabore um código que receba a idade de uma pessoa e classifique-a imprimindo uma das mensagens: \"Menor de idade\" (menos de 18 anos), \"Adulto\" (entre 18 e 59 anos) ou \"Idoso\" (60 anos ou mais).\n"
+      ],
+      "metadata": {
+        "id": "Xd-LHDtlazQd"
+      },
+      "id": "Xd-LHDtlazQd"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"fale sua idade\"))\n",
+        "if (x < 18):\n",
+        "  print(\"Menor de idade\")\n",
+        "elif (x > 18 and x <= 59):\n",
+        "  print(\"Adulto\")\n",
+        "else :\n",
+        " print(\"Idoso\")"
+      ],
+      "metadata": {
+        "id": "v-SBPg_ta2uW",
+        "outputId": "06172d3c-e904-4f05-dede-2d95ef6d0cbb",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "v-SBPg_ta2uW",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "fale sua idade 41\n",
+            "Adulto\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 12- Elabore um código que declare duas variáveis numéricas x e y. Crie uma estrutura condicional que verifique se x é maior que 0 E y é menor que 10. Se a condição for verdadeira, imprima \"Valores válidos\", caso contrário, imprima \"Valores fora do limite\".\n"
+      ],
+      "metadata": {
+        "id": "KdW-lJjPc6K9"
+      },
+      "id": "KdW-lJjPc6K9"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"informe um número: \"))\n",
+        "y = int(input(\"informe outro número: \"))\n",
+        "if (x > 0 and y < 10):\n",
+        "  print(\"Valores válidos\")\n",
+        "else:\n",
+        "  print(\"Valores fora do limite\")\n"
+      ],
+      "metadata": {
+        "id": "IP04CgOwdGC2",
+        "outputId": "f0e400d9-2378-4312-a87d-0d9c59cd046f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "IP04CgOwdGC2",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "informe um número:  5\n",
+            "informe outro número:  12\n",
+            "Valores fora do limite\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 13- Elabore um código que utilize um laço for junto com a função range() para imprimir todos os números múltiplos de 3 no intervalo de 0 a 30."
+      ],
+      "metadata": {
+        "id": "laTQ90xFeHcK"
+      },
+      "id": "laTQ90xFeHcK"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for valor in range (0,33,3):\n",
+        "  print(valor)"
+      ],
+      "metadata": {
+        "id": "TpVnzkk6eScB",
+        "outputId": "c1e9afbf-008e-4c78-970e-ee55784fd3e7",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "TpVnzkk6eScB",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "3\n",
+            "6\n",
+            "9\n",
+            "12\n",
+            "15\n",
+            "18\n",
+            "21\n",
+            "24\n",
+            "27\n",
+            "30\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 14- Elabore um código que crie uma lista de disciplinas do curso (ex: Matemática, Estatística, Programação). Use um laço for para iterar sobre a lista e imprimir a frase: \"Eu preciso estudar [disciplina]\" para cada item.\n"
+      ],
+      "metadata": {
+        "id": "55xsqi0pfpqi"
+      },
+      "id": "55xsqi0pfpqi"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "matérias = [\"Matemática\", \"Ciência de dados\", \"Programação\"]\n",
+        "for matéria in matérias:\n",
+        " print(f\"eu preciso estudar {matéria}\")"
+      ],
+      "metadata": {
+        "id": "5Fc1UhfrfxXq",
+        "outputId": "55394269-cbd7-4d36-a63e-279e6b82524f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "id": "5Fc1UhfrfxXq",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "eu preciso estudar Matemática\n",
+            "eu preciso estudar Ciência de dados\n",
+            "eu preciso estudar Programação\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 15 - Elabore um código que utilize um laço while para fazer uma contagem regressiva, começando em 10 e indo até 0. Quando a contagem terminar, imprima a palavra \"Decolar!\".\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "SvxkUTiziNEP"
+      },
+      "id": "SvxkUTiziNEP"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = 10\n",
+        "while x >= 0 :\n",
+        " print(x)\n",
+        " x = x-1\n",
+        "if x < 0:\n",
+        "  print(\"Decolar!\")\n"
+      ],
+      "metadata": {
+        "id": "3mw3lJ8_iRne",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "5b98f090-b265-4cf7-8af9-981e42df6657"
+      },
+      "id": "3mw3lJ8_iRne",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "10\n",
+            "9\n",
+            "8\n",
+            "7\n",
+            "6\n",
+            "5\n",
+            "4\n",
+            "3\n",
+            "2\n",
+            "1\n",
+            "0\n",
+            "Decolar!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 16- Elabore um código que, utilizando a sintaxe concisa de List Comprehension, crie uma nova lista contendo o cubo (elevado à potência de 3) dos números pares do intervalo de 0 a 10. Imprima a lista gerada."
+      ],
+      "metadata": {
+        "id": "Fbw1aIsF-SWb"
+      },
+      "id": "Fbw1aIsF-SWb"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "cubo = []\n",
+        "for numero in range(0,11,2):\n",
+        "  cubo.append(numero**3)\n",
+        "\n",
+        "cubo"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8eEKby3G-y_e",
+        "outputId": "a7e9b481-ffb3-476c-82bd-fcbc6968facb"
+      },
+      "id": "8eEKby3G-y_e",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 8, 64, 216, 512, 1000]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 17- Elabore uma função chamada saudacao_personalizada que não possua retorno (return), mas que receba um nome como parâmetro e simplesmente imprima a mensagem: \"Seja muito bem-vindo(a) ao mundo dos dados, [nome]!\". Teste chamando a função.\n"
+      ],
+      "metadata": {
+        "id": "EgLgNiMKACMg"
+      },
+      "id": "EgLgNiMKACMg"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def saudacao_personalizada(nome):\n",
+        "  print(f\"Seja muito bem-vindo(A) ao mundo de dados,{nome}!\")\n",
+        "saudacao_personalizada(\"Amanda\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3hByM9TeAQle",
+        "outputId": "d0f5bb9a-aa09-4805-dec8-5637fe97c7a2"
+      },
+      "id": "3hByM9TeAQle",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Seja muito bem-vindo(A) ao mundo de dados,Amanda!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 18- Elabore uma função chamada calcula_desconto que receba dois parâmetros: o valor de um produto e a porcentagem de desconto. A função deve retornar o valor final do produto com o desconto aplicado. Teste a função e imprima o resultado.\n"
+      ],
+      "metadata": {
+        "id": "FN892L-3Q7_r"
+      },
+      "id": "FN892L-3Q7_r"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def calcula_desconto(valor_produto,porc_desconto) :\n",
+        " return valor_produto - (porc_desconto / 100) * valor_produto\n"
+      ],
+      "metadata": {
+        "id": "xJBA3wYBRNTL"
+      },
+      "id": "xJBA3wYBRNTL",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"o valor final do produto com o desconto aplicado é: \")\n",
+        "print(calcula_desconto(200,20))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NIfLNPK9VtFT",
+        "outputId": "98ce2f65-ee62-4a80-8908-7ffa29116c47"
+      },
+      "id": "NIfLNPK9VtFT",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "o valor final do produto com o desconto aplicado é: \n",
+            "160.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 19- Elabore uma função chamada classifica_nota que receba uma nota de 0 a 10. A função deve retornar \"Aprovado\" se a nota for maior ou igual a 7, \"Recuperação\" se estiver entre 5 e 6.9, e \"Reprovado\" se for menor que 5. Chame a função passando uma nota e imprima o retorno.\n"
+      ],
+      "metadata": {
+        "id": "Bi6mFLZRX9Bj"
+      },
+      "id": "Bi6mFLZRX9Bj"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def classifica_nota (nota) :\n",
+        " if nota >= 7:\n",
+        "  return \"aprovado, parabéns!\"\n",
+        " elif nota >= 5 and nota <= 6.9 :\n",
+        "  return \"em recuperação\"\n",
+        " else:\n",
+        "    return \"reprovado\"\n"
+      ],
+      "metadata": {
+        "id": "13DVO1lSgxrL"
+      },
+      "id": "13DVO1lSgxrL",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nota = int(input(\"informe sua nota\"))\n",
+        "print(classifica_nota(nota))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "tsHksLssh0dh",
+        "outputId": "d1a86a49-15eb-4ecf-89b9-12bdede3fbdb"
+      },
+      "id": "tsHksLssh0dh",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "informe sua nota7\n",
+            "aprovado, parabéns!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Questão 20- Elabore um código que receba uma lista de números inteiros mistos (positivos, negativos e zeros). Utilize um laço for com estruturas condicionais if/elif/else para contabilizar quantos números são positivos, quantos são negativos e quantos são exatamente zero. Ao final, imprima esse resumo.\n"
+      ],
+      "metadata": {
+        "id": "zJDyNvbCiSGK"
+      },
+      "id": "zJDyNvbCiSGK"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "x = int(input(\"informe por qual número você quer que comece sua lista: \" ))\n",
+        "y = int(input(\"informe o número que finaliza sua lista: \"))\n",
+        "lista = []\n",
+        "for numero in range(x,y):\n",
+        "  if numero > 0:\n",
+        "    print(numero,\"é positivo\")\n",
+        "  elif numero < 0:\n",
+        "   print(numero,\"é negativo\")\n",
+        "  else:\n",
+        "    print(\"o número é 0\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "NQwC3klqiXya",
+        "outputId": "7a9ce74f-6714-450f-8a2e-a724fd3e28d1"
+      },
+      "id": "NQwC3klqiXya",
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "informe por qual número você quer que comece sua lista: -3\n",
+            "informe o número que finaliza sua lista: 5\n",
+            "-3 é negativo\n",
+            "-2 é negativo\n",
+            "-1 é negativo\n",
+            "o número é 0\n",
+            "1 é positivo\n",
+            "2 é positivo\n",
+            "3 é positivo\n",
+            "4 é positivo\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
